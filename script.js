@@ -1,6 +1,6 @@
 var headers = Array.from(document.querySelectorAll("h1, h2, h3"));
 headers.forEach(function(title) {
-  var oldtitle = title.innerHTML;
+  var oldtitle = title.textContent;
   var oReq = new XMLHttpRequest();
   oReq.addEventListener("load", reqListener);
   oReq.open("GET", "https://yoda.p.mashape.com/yoda?sentence="+oldtitle);
@@ -9,6 +9,6 @@ headers.forEach(function(title) {
   oReq.send();
 
   function reqListener () {
-    title.innerHTML = this.responseText;
+    title.textContent = this.responseText;
   }
 });
