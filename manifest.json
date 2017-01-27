@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Yodafying it",
+  "description": "This extension will transform all big headers (h1/h2) to yoda talk",
+  "version": "1.0",
+
+  "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
+
+  "browser_action": {
+   "default_icon": "icon.png",
+   "default_popup": "popup.html",
+   "default_title": "Yodify here!"
+  },
+  "permissions": [
+   "activeTab",
+   "tabs",
+   "http://*/*",
+   "https://*/*"
+   ]
+
+}
